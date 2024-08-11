@@ -37,17 +37,19 @@ Antes de executar o software, certifique-se de que o Python 3.6 ou superior este
 1. **Clone o repositório**:
    ```bash
    git clone https://github.com/seu-usuario/gestao-moradias-emergencia.git
-   cd gestao-m
-   oradias-emergencia
+   cd gestao-moradias-emergencia
    ```
-Execução do Software
+##Execução do Software
 Para iniciar o software, execute o seguinte comando:
   ```bash
     python app.py
   ```
 O software fornecerá uma interface para gerenciar materiais, transporte e estoque de alimentos de forma integrada. A interface pode ser acessada via um navegador da web (se uma interface gráfica foi implementada) ou por meio de uma linha de comando.
 
-Personalização
+##Personalização
 Controle de Materiais: As regras de uso e reposição de materiais podem ser ajustadas no módulo controle_materiais.py.
 Logística de Transporte: Parâmetros de rotas e urgências podem ser configurados no módulo logistica_transporte.py.
 Gestão de Estoque: As funcionalidades de gestão de alimentos estão no módulo gestao_estoque.py.
+
+Amostra de Deploy do Software em:
+https://replit.com/@JosCarlosCarl39/Flask-Python-CRUD-SQLite?v=1
