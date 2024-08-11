@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>Edit Data {{ data[1] }}</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/bootstrap.css') }}">
+    <script src="{{ url_for('static',filename='js/bootstrap.bundle.min.js') }}"></script>
+  </head>
+  <body>
+  <br>
+  <div class="container">
+  <h3>Data Siswa Kelas 10 - SMA Talenta Bandung</h3>
+  <br>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="{{url_for('index')}}">Home</a></li>
+      <li class="breadcrumb-item"><a href="{{url_for('app_crud.view')}}">Data Siswa</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Edit Data {{ data[1] }}</li>
+    </ol>
+  </nav>
+  <br>
+  <form method="post" action="{{ url_for('app_crud.update', nis=data[0]) }}">
+		<label>NIS:</label>
+		<input type="text" name="nis" value="{{ data[0] }}" class="form-control" readonly><br>
+		<label>Nama:</label>
+		<input type="text" name="nama" value="{{ data[1] }}" class="form-control"><br>
+		<label>Kelas:</label>
+		<textarea name="kelas" class="form-control">{{ data[2] }}</textarea><br>
+		<input class="btn btn-primary" type="submit" value="Update Data {{ data[1] }}">
+	</form>
+  </div>
+  </body>
+</html>

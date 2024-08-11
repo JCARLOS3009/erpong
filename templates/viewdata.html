@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <title>View Data</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/bootstrap.css') }}">
+  </head>
+  <body>
+  <br>
+  <div class="container">
+  <h3>Data Siswa Kelas 10 - SMA Talenta Bandung</h3>
+  <br>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="{{url_for('index')}}">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">View Data</li>
+    </ol>
+  </nav>
+  <br>
+  <table id="mydata" class="table table-striped table-hover" width="100%">
+      <tr class="table-primary">
+        <th>No</th>
+        <th>NIS</th>
+        <th>Kelas</th>
+        <th>Nama Peserta Didik</th>
+        <th>#</th>
+      </tr>
+      {% for row in data %}
+      <tr>
+        <td>{{ loop.index }}</td>
+        <td>{{ row[0] }}</td>
+        <td>{{ row[2] }}</td>
+        <td>{{ row[1] }}</td>
+        <td>
+          <a href="{{ url_for('app_crud.edit', nis=row[0]) }}" class="btn btn-warning" title="Edit Data {{ row[1] }}">Edit</a>&nbsp;
+          <a href="{{ url_for('app_crud.delete', nis=row[0]) }}" class="btn btn-danger" title="Hapus Data {{ row[1] }}">Hapus</a>
+        </td>
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+  </body>
+</html>

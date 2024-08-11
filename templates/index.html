@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <title>Index</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/bootstrap.css') }}">
+    <script src="{{ url_for('static',filename='js/bootstrap.bundle.min.js') }}"></script>
+  </head>
+  <body>
+   <center>
+   <h3>Integrasi Web PyFlask with SQLite CRUD Delete & View</h3>
+   <hr>
+   <img src="{{url_for('static',filename='images/logo_sqlite.png')}}" width="150px">&nbsp;
+    <img src="{{url_for('static',filename='images/logo_python.png')}}" width="100px">&nbsp;
+    <img src="{{url_for('static',filename='images/logo_flask.png')}}" width="150px">
+    <br/><br/>
+    <a class="btn btn-success" href="{{url_for('app_crud.view')}}">View Data</a>&nbsp;
+    </center>
+  </body>
+</html>
